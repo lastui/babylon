@@ -37,5 +37,15 @@
     "babel-plugin-styled-components": "1.10.7",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "babel-plugin-transform-undefined-to-void": "6.9.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lastui/babylon.git"
+  },
+  "author": "jan.cajthaml@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lastui/babylon/issues"
+  },
+  "homepage": "https://github.com/lastui/babylon#readme"
 }
