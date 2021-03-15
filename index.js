@@ -95,11 +95,6 @@ module.exports = {
     production: {
       plugins: [
         ...plugins,
-        [
-          'transform-react-remove-prop-types', {
-            mode: 'wrap',
-          },
-        ],
       ],
     },
     test: {
