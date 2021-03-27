@@ -75,8 +75,7 @@ module.exports = {
   env: {
     development: {
       plugins: [
-        ...plugins,
-        'react-hot-loader/babel'
+        ...plugins
       ]
     },
     production: {
