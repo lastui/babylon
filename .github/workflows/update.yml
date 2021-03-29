@@ -33,7 +33,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
-          commit-message: Update dependencies and recompile dlls
+          commit-message: Update dependencies
           title: Update dependencies
           labels: |
             dependencies
