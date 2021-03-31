@@ -1,6 +1,7 @@
 const plugins = [
   '@babel/plugin-proposal-function-bind',
   '@babel/plugin-proposal-export-default-from',
+  '@babel/plugin-transform-react-display-name',
   '@babel/plugin-proposal-logical-assignment-operators',
   [
     '@babel/plugin-proposal-optional-chaining',
