@@ -35,13 +35,6 @@ const plugins = [
     },
   ],
   '@babel/plugin-proposal-json-strings',
-
-  [
-    '@babel/plugin-transform-runtime',
-    {
-      regenerator: true
-    },
-  ],
   [
     'styled-components', {
       ssr: true,
