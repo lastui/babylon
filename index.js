@@ -35,13 +35,6 @@ const plugins = [
     },
   ],
   '@babel/plugin-proposal-json-strings',
-  [
-    'styled-components', {
-      ssr: true,
-      displayName: true,
-      preprocess: false,
-    },
-  ],
   'transform-undefined-to-void',
 ]
 
@@ -61,7 +54,6 @@ module.exports = {
       },
     ],
     '@babel/preset-react',
-    '@babel/preset-typescript',
   ],
 
   plugins,
