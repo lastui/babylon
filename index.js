@@ -1,85 +1,78 @@
 const plugins = [
-  '@babel/plugin-proposal-function-bind',
-  '@babel/plugin-proposal-export-default-from',
-  '@babel/plugin-transform-react-display-name',
-  '@babel/plugin-proposal-logical-assignment-operators',
+  "@babel/plugin-proposal-function-bind",
+  "@babel/plugin-proposal-export-default-from",
+  "@babel/plugin-transform-react-display-name",
+  "@babel/plugin-proposal-logical-assignment-operators",
   [
-    '@babel/plugin-proposal-optional-chaining',
+    "@babel/plugin-proposal-optional-chaining",
     {
       loose: false,
     },
   ],
   [
-    '@babel/plugin-proposal-nullish-coalescing-operator',
+    "@babel/plugin-proposal-nullish-coalescing-operator",
     {
       loose: false,
     },
   ],
-  '@babel/plugin-proposal-do-expressions',
+  "@babel/plugin-proposal-do-expressions",
   [
-    '@babel/plugin-proposal-decorators',
+    "@babel/plugin-proposal-decorators",
     {
       legacy: true,
     },
   ],
-  '@babel/plugin-proposal-function-sent',
-  '@babel/plugin-proposal-export-namespace-from',
-  '@babel/plugin-proposal-numeric-separator',
-  '@babel/plugin-proposal-throw-expressions',
-  '@babel/plugin-syntax-dynamic-import',
-  '@babel/plugin-syntax-import-meta',
+  "@babel/plugin-proposal-function-sent",
+  "@babel/plugin-proposal-export-namespace-from",
+  "@babel/plugin-proposal-numeric-separator",
+  "@babel/plugin-proposal-throw-expressions",
+  "@babel/plugin-syntax-dynamic-import",
+  "@babel/plugin-syntax-import-meta",
   [
-    '@babel/plugin-proposal-class-properties',
+    "@babel/plugin-proposal-class-properties",
     {
       loose: false,
     },
   ],
-  '@babel/plugin-proposal-json-strings',
-  'transform-undefined-to-void',
-]
+  "@babel/plugin-proposal-json-strings",
+  "transform-undefined-to-void",
+  "@babel/plugin-transform-react-jsx",
+];
 
 module.exports = {
-
   presets: [
     [
-      '@babel/preset-env',
+      "@babel/preset-env",
       {
         targets: {
-          browsers: [
-            'last 2 versions',
-          ],
+          browsers: ["last 2 versions"],
         },
         modules: false,
         shippedProposals: true,
       },
     ],
-    '@babel/preset-react',
+    "@babel/preset-react",
   ],
 
   plugins,
 
   env: {
     development: {
-      plugins: [
-        ...plugins
-      ]
+      plugins: [...plugins],
     },
     production: {
       plugins: [
         ...plugins,
         [
-          'transform-react-remove-prop-types', {
-            mode: 'wrap',
+          "transform-react-remove-prop-types",
+          {
+            mode: "wrap",
           },
         ],
       ],
     },
     test: {
-      plugins: [
-        ...plugins,
-        'babel-plugin-transform-es2015-modules-commonjs',
-      ],
+      plugins: [...plugins, "babel-plugin-transform-es2015-modules-commonjs"],
     },
   },
-
-}
+};
