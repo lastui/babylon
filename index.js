@@ -36,7 +36,6 @@ const plugins = [
   ],
   "@babel/plugin-proposal-json-strings",
   "transform-undefined-to-void",
-  "@babel/plugin-transform-react-jsx",
 ];
 
 module.exports = {
@@ -51,7 +50,13 @@ module.exports = {
         shippedProposals: true,
       },
     ],
-    "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        throwIfNamespace: true,
+        runtime: "automatic",
+      },
+    ],
   ],
 
   plugins,
